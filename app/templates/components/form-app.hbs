@@ -1,2 +1,24 @@
 <h1>FORM</h1>
-{{yield}}
+
+<div class="row">
+  <div class="col-md-6 form">
+    NAME: {{input type="text" value=name placeholder="John Doe"}}
+    <br />
+    ADDRESS: {{input type="text" value=address placeholder="123 High Street"}}
+    <br />
+    CITY: {{input type="text" value=city placeholder="Columbus"}}
+    <br />
+    STATE: {{input type="text" value=state placeholder="Ohio"}}
+    <br />
+    ZIP: {{input type="text" value=zip placeholder="43201"}}
+  </div>
+
+  <div class="col-md-6 show">
+    <h2>{{name}}</h2>
+    {{address}} 
+    <br />
+    {{city}} 
+    <br />
+    {{state}} {{zip}}
+  </div>
+</div>
