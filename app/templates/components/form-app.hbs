@@ -2,6 +2,7 @@
 
 <div class="row">
   <div class="col-md-6 form">
+    <h2>BASIC INFO</h2>
     NAME: {{input type="text" value=name placeholder="John Doe"}}
     <br />
     ADDRESS: {{input type="text" value=address placeholder="123 High Street"}}
@@ -11,14 +12,72 @@
     STATE: {{input type="text" value=state placeholder="Ohio"}}
     <br />
     ZIP: {{input type="text" value=zip placeholder="43201"}}
+    <br />
+    PHONE: {{input type="text" value=phone placeholder="(614)123-5555"}}
+    <br />
+    EMAIL: {{input type="text" value=email placeholder="brutus@osu.edu"}}
+    <br />
+    WEBSITE: {{input type="text" value=website placeholder="brutus.com"}}
+    <h2>EDUCATION</h2>
+    SCHOOL: {{input type="text" value=school placeholder="The Ohio State University"}}
   </div>
 
   <div class="col-md-6 show">
-    <h2>{{name}}</h2>
-    {{address}} 
-    <br />
-    {{city}} 
-    <br />
-    {{state}} {{zip}}
+    <div class="row">
+      {{#if name}}
+        <h1>{{name}}</h1>
+      {{else}}
+        <h1>John Doe</h1>
+      {{/if}}
+
+      <div class="pull-left">
+        {{#if address}}
+          {{address}} 
+        {{else}}
+          123 High Street
+        {{/if}}
+        <br />
+
+        {{#if city}}
+          {{city}}, 
+        {{else}}
+          Columbus,
+        {{/if}}
+
+        {{#if state}}
+          {{state}} 
+        {{else}}
+          Ohio
+        {{/if}}
+
+        {{#if zip}}
+          {{zip}}
+        {{else}}
+          43201
+        {{/if}}
+        <br />
+
+        {{#if phone}}
+          {{phone}}
+        {{else}}
+          (614)123-5555
+        {{/if}}
+      </div>
+
+      <div class="pull-right">
+        {{#if email}}
+          {{email}}
+        {{else}}
+          brutus@osu.edu
+        {{/if}}
+        <br />
+        {{website}}
+      </div>
+    </div>
+    
+    <div class="row">
+      <h2>Education</h2>
+      <h3>{{school}}</h3>
+    </div>
   </div>
 </div>
